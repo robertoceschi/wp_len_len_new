@@ -10,7 +10,13 @@
                 <ul class="chapter-list">
                     <li class="chapter-summary">
 
-                        <?php if (function_exists(clean_custom_menus())) clean_custom_menus(); ?>
+                        <?php
+                            $args = array(
+                                'menu' => 'main_menu'
+                            );
+                            wp_nav_menu($args);
+
+                        ?>
                        </li>
                 </ul>
             </aside>
