@@ -10,34 +10,8 @@
                 <ul class="chapter-list">
                     <li class="chapter-summary">
 
-                        <?php
-                            $args = array(
-                                'menu' => 'main_menu'
-                            );
-
-                            wp_nav_menu($args);
-
-                        ?>
-
-                        <a href="#" data-hover="Home">
-    HOME
-                        </a>
-                    </li>
-                    <li class="chapter-summary">
-                        <a href="#" data-hover="LIKES">
-    LIKES
-                        </a>
-                    </li>
-                    <li class="chapter-summary">
-                        <a href="chapter3.html" data-hover="IMPRESSIONS">
-    IMPRESSIONS
-                        </a>
-                    </li>
-                    <li class="chapter-summary">
-                        <a href="chapter3.html" data-hover="BLOG ARCHIVE">
-    BLOG ARCHIVE
-</a>
-                    </li>
+                        <?php if (function_exists(clean_custom_menus())) clean_custom_menus(); ?>
+                       </li>
                 </ul>
             </aside>
 

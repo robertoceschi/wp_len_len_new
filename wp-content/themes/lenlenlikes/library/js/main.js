@@ -1,19 +1,19 @@
 // Make the showSidebar function into a variable so it can be easily called
 var showSidebar = function () {
-    var $target = $('body').toggleClass("active");
+    var $target = jQuery('body').toggleClass("active");
     //Anpassungen für OFF-CanvasBanner
     if ($target.hasClass('active')) {
-        $('.main-link-headline').css('display', 'none');
+        jQuery('.main-link-headline').css('display', 'none');
     }
     if (!$target.hasClass('active')) {
-        $('.main-link-headline').css('display', 'block');
+        jQuery('.main-link-headline').css('display', 'block');
     }
 };
 // add/remove classes everytime the window resize event fires
 jQuery(window).resize(function () {
-    var off_canvas_nav_display = $('.off-canvas-navigation').css('display');
+    var off_canvas_nav_display = jQuery('.off-canvas-navigation').css('display');
     if (off_canvas_nav_display === 'block') {
-        $("body").removeClass("active");
+        jQuery("body").removeClass("active");
     }
 });
 jQuery(document).ready(function ($) {
@@ -39,7 +39,7 @@ jQuery(document).ready(function ($) {
         itemSelector: '.item',
         isFitWidth: true
     }).imagesLoaded(function () {
-            $('#content').masonry('reload');
+            jQuery('#content').masonry('reload');
         });
 
     /*global jQuery */

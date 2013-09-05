@@ -1,9 +1,13 @@
 <!doctype html>
 
-<!--[if lt IE 7]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if (IE 7)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8"><![endif]-->
-<!--[if (IE 8)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!--> <html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
+<!--[if lt IE 7]>
+<html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]>
+<html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]>
+<html <?php language_attributes(); ?> class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
 
 <head>
     <meta charset="utf-8">
@@ -11,7 +15,7 @@
     <!-- Google Chrome Frame for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title><?php wp_title( '|', true, 'right' ); ?></title>
+    <title><?php wp_title('|', true, 'right'); ?></title>
 
     <!-- mobile meta (hooray!) -->
     <meta name="HandheldFriendly" content="True">
@@ -26,7 +30,8 @@
     <![endif]-->
     <!-- or, set /favicon.ico for IE10 win -->
     <meta name="msapplication-TileColor" content="#f01d4f">
-    <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
+    <meta name="msapplication-TileImage"
+          content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
 
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
@@ -41,21 +46,22 @@
 
 <body <?php body_class(); ?>>
 <!--Main Container-->
- <div class="fluid-container">
-     <!--Inner Container-->
-     <div class="inner-content">
-
-
-         <div role="main" class="main-content">
-             <header role="banner">
+<div class="fluid-container">
+    <!--Inner Container-->
+    <div class="inner-content">
+        <!--OFF-Canvas part left-->
+        <?php get_sidebar(); ?>
+        <!--End OFF-Canvas part left -->
+        <div role="main" class="main-content">
+            <header role="banner">
             <span class="sidebar-item">
                 <a href="#sidebar" id="sidebar_button" class="sidebar_button" aria-hidden="true"
                    data-icon="&#xe006;" title="Menu"><span class="menu_title">Menu</span></a></span>
 
 
-                 <div class="site-title">
-                     <h1 class="main-link-headline"><a href="<?php echo home_url( '/' ); ?>
-"><?php bloginfo( 'name' ); ?></a></h1>
-                 </div>
+                <div class="site-title">
+                    <h1 class="main-link-headline"><a href="<?php echo home_url('/'); ?>
+"><?php bloginfo('name'); ?></a></h1>
+                </div>
 
-             </header>
+            </header>
