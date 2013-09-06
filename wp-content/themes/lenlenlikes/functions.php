@@ -25,6 +25,10 @@
 
         // Adds JavaScript for Masonry
         wp_enqueue_script('masonry', get_template_directory_uri() . '/library/js/jquery.masonry.min.js', array('jquery'), '2.1.08', true);
+
+        // Adds JavaScript for Fittext
+        wp_enqueue_script( 'fittext', get_template_directory_uri() . '/library/js/fittext.js', array( 'jquery' ), '1.1' );
+
     }
     add_action('wp_enqueue_scripts', 'theme_js');
 

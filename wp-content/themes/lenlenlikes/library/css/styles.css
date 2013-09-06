@@ -364,13 +364,13 @@ a {
 
 /* line 22, ../sass/partials/_base.scss */
 ::-moz-selection {
-  background: red;
+  background: #1abc9c;
   text-shadow: none;
 }
 
 /* line 26, ../sass/partials/_base.scss */
 ::selection {
-  background: red;
+  background: #1abc9c;
   text-shadow: none;
 }
 
@@ -572,39 +572,36 @@ body.active nav[role='navigation'] aside#main_nav a {
   text-transform: uppercase;
   padding: .3em;
   font-size: 1.2em;
-}
-/* line 92, ../sass/partials/_modules.scss */
-body.active nav[role='navigation'] aside#main_nav a::before, body.active nav[role='navigation'] aside#main_nav a::after {
-  display: inline-block;
-  opacity: 0;
-  -webkit-transition: 0.3s ease-in, 0.2s ease-out;
-  -moz-transition: 0.3s ease-in, 0.2s ease-out;
-  -o-transition: 0.3s ease-in, 0.2s ease-out;
-  transition: 0.3s ease-in, 0.2s ease-out;
-}
-/* line 97, ../sass/partials/_modules.scss */
-body.active nav[role='navigation'] aside#main_nav a::before {
-  margin-right: 3px;
-  content: '[';
-  -webkit-transform: translateX(20px);
-  -moz-transform: translateX(20px);
-  transform: translateX(20px);
-}
-/* line 104, ../sass/partials/_modules.scss */
-body.active nav[role='navigation'] aside#main_nav a::after {
-  margin-left: 3px;
-  content: ']';
-  -webkit-transform: translateX(-20px);
-  -moz-transform: translateX(-20px);
-  transform: translateX(-20px);
-}
-/* line 114, ../sass/partials/_modules.scss */
-body.active nav[role='navigation'] aside#main_nav a:hover::before, body.active nav[role='navigation'] aside#main_nav a:hover::after, body.active nav[role='navigation'] aside#main_nav a:focus::before, body.active nav[role='navigation'] aside#main_nav a:focus::after {
-  opacity: 1;
-  -webkit-transform: translateX(0px);
-  -moz-transform: translateX(0px);
-  transform: translateX(0px);
-  -webkit-transform: translateY(-2px);
+  /*&::before,
+  &::after {
+    display: inline-block;
+    opacity: 0;
+    @include transition(0.3s ease-in, 0.2s ease-out);
+  }
+  &::before {
+    margin-right: 3px;
+    content: '[';
+    -webkit-transform: translateX(20px);
+    -moz-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+  &::after {
+    margin-left: 3px;
+    content: ']';
+    -webkit-transform: translateX(-20px);
+    -moz-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+  &:hover::before,
+  &:hover::after,
+  &:focus::before,
+  &:focus::after {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    transform: translateX(0px);
+    -webkit-transform: translateY(-2px);
+  }*/
 }
 /* line 121, ../sass/partials/_modules.scss */
 body.active nav[role='navigation'] aside#main_nav a:hover {
