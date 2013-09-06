@@ -29,9 +29,29 @@
                                                           class=" icon-arrow-down-alt1"></span></a>
         </div>
 
+
+
     <?php endwhile; else: ?>
         // no posts found
     <?php endif; ?>
+
+
+<div id="content" class="container clearfix">
+            <div id="site-content">
+                <?php
+                    $linksPosts = new WP_Query();
+                    $linksPosts->query('showposts=1&cat=7');
+                ?>
+                <?php while ($linksPosts->have_posts()) : $linksPosts->the_post(); ?>
+                <div class="item">
+                    <!--<img src="img/single-1.jpg" alt=""/>-->
+                    <h4><a href="<?php if(get_post_meta($post->ID, "url", true)) echo get_post_meta($post->ID, "url", true); else the_permalink(); ?>"><?php the_title(); ?></a></h4>
+                </div>
+
+
+            </div>
+    <?php endwhile; ?>
+        </div>
 
 
 <?php get_footer(); ?>

@@ -2,7 +2,6 @@
     /**
      * Proper way to enqueue scripts and styles
      */
-
     //Load the Theme CSS
     function theme_styles () {
         wp_enqueue_style('main', get_template_directory_uri() . '/library/css/styles.css');
@@ -32,7 +31,6 @@
     }
     add_action('wp_enqueue_scripts', 'theme_js');
 
-
     /**
      * TypeKit Fonts
      *
@@ -58,8 +56,17 @@
     add_action('wp_head', 'theme_typekit_inline');
 
 
+    /**
+     * Wordpress Custom Stuff
+     *
+     *
+     */
+
     //enable custom menus
     add_theme_support('menus');
+    //enable Featured Images in Posts and Pages
+    add_theme_support( 'post-thumbnails' );
+
 
 
 
