@@ -54,13 +54,12 @@
     add_action('wp_head', 'theme_typekit_inline');
 
 
+    //enable custom menus
+    add_theme_support('menus');
 
-add_action('after_setup_theme', 'theme_setup');
 
-function theme_setup () {
-    register_nav_menus(array(
-        'sidenav' => __('main_menu'),
-        'footer_nav' => __('footer_nav')
-    ));
 
-}
+
+
+
+

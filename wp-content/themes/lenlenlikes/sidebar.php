@@ -9,7 +9,7 @@
             <aside id="main_nav">
                 <?php
                     $args = array(
-                        'menu' => 'main_nav',
+                        'menu' => 'main_menu',
                         'echo' =>  false
                     );
 
