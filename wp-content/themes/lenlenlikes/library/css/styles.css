@@ -862,7 +862,6 @@ body.active nav[role='navigation'] aside#categories ul li.cat-item a {
 
 /* line 374, ../sass/partials/_modules.scss */
 #main_image {
-  background-image: url('../images/ellen-header.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover !important;
@@ -997,4 +996,9 @@ span.icon-heart {
 .icon-arrow-down-alt1 {
   font-size: 2.5em;
   color: white;
+}
+
+/* line 504, ../sass/partials/_modules.scss */
+#hidden_image {
+  display: none;
 }

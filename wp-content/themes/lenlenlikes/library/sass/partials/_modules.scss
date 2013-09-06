@@ -372,7 +372,7 @@ body.active {
 }
 
 #main_image {
-  background-image: image-url('ellen-header.jpg');
+  //background-image: image-url('ellen-header.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover !important;
@@ -498,4 +498,9 @@ span.icon-heart {
 .icon-arrow-down-alt1 {
   font-size: 2.5em;
   color: white;
+}
+
+
+#hidden_image {
+  display: none;
 }

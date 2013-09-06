@@ -17,6 +17,12 @@ jQuery(window).resize(function () {
     }
 });
 jQuery(document).ready(function ($) {
+
+    // Hauptbild auf der Home-Site wird als CSS-Background-Image ausgegeben
+    var image_src = jQuery("#hidden_image img").attr('src');
+    jQuery("#main_image").css("background-image", "url(" + image_src + ")");
+
+
     // Toggle for sidebar
     $('#sidebar_button').click(function (e) {
         e.preventDefault();
