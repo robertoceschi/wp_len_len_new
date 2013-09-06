@@ -7,18 +7,15 @@
     <!--Start OFF-Canvas part left-->
         <nav role="navigation">
             <aside id="main_nav">
-                <ul class="chapter-list">
-                    <li class="chapter-summary">
+                <?php
+                    $args = array(
+                        'menu' => 'main_nav',
+                        'echo' =>  false
+                    );
 
-                        <?php
-                            $args = array(
-                                'menu' => 'main_menu'
-                            );
-                            wp_nav_menu($args);
+                        echo strip_tags(wp_nav_menu($args), '<a>');
+                    ;?>
 
-                        ?>
-                       </li>
-                </ul>
             </aside>
 
             <aside id="sociallinks"><h3 class="one"><span>FIND ME ONE</span></h3>
