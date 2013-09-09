@@ -39,12 +39,33 @@ $linksPosts = new WP_Query('posts_per_page=6');
 ?>
 <?php while ($linksPosts->have_posts()) :
     $linksPosts->the_post(); ?>
-    <div class="item">
+    <article id="post-<?php the_ID(); ?>" class="item">
+        <div class="overlay">
+            <header class="entry-header">
+                <div class="featured-post"></div>
+                <div class="entry-postformat"><a href="<?php the_permalink(); ?>"></a></div>
+                <h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf(
+                        esc_attr__('Permalink to %s', 'renkon'), the_title_attribute('echo=0')
+                    ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+            </header>
+            <!--end .entry-header -->
+            <footer class="entry-meta">
+                <div class="entry-date"><a href="<?php the_permalink(); ?>"><?php echo get_the_date(); ?></a></div>
+                <div class="entry-comments">
+                    <?php comments_popup_link(); ?>
+                </div>
+                <div class="view-post"><a href="<?php the_permalink(); ?>" title=""><?php _e('View Post', 'renkon') ?></a></div>
+            </footer><!-- end .entry-meta -->
+
+
+        </div>
         <!--Link zum Post -->
-        <a href="<?php the_permalink(); ?>" class="thumb"><?php the_post_thumbnail('thumbnail'); ?></a>
-    </div> <?php endwhile; ?>
+        <div class="thumb-wrap">
+            <a href="<?php the_permalink(); ?>" class="thumb"><?php the_post_thumbnail('thumbnail'); ?></a>
+        </div>
+    </article> <?php endwhile; ?>
     </div>
 </div>
-    </div>
+
 
 <?php get_footer(); ?>

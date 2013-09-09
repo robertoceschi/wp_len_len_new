@@ -43,7 +43,7 @@ jQuery(document).ready(function ($) {
 
     // Initialize Masonry
     $('#content').masonry({
-        columnWidth: 260,
+        columnWidth: 360,
         itemSelector: '.item',
         isFitWidth: true
     }).imagesLoaded(function () {
