@@ -433,13 +433,18 @@ body.active {
   /*width: 95%;*/
   //width: auto;
   margin: 1.5em auto;
+
 }
 
 #site-content {
   max-width: 100%;;
   margin: 0;
+  article {
+  }
+  a {
+    border-bottom: none;
+  }
 }
-
 
 
 .item {
@@ -496,16 +501,21 @@ body.active {
 
   .overlay .entry-header {
     position: absolute;
-    top: 10px;
-    left: 3%;
+    top: 65px;
+    left: 5%;
     padding: 1px 10% 6px;
     background: rgba(255, 255, 255, 0.7);
     display: inline-block;
     max-width: 88%;
 }
 
-.thumb-wrap img {
-  //max-width: 100%;
+  .overlay .entry-meta {
+    padding-top: 230px;
+    position: absolute;
+    padding-left: 50px;
+  }
+
+.thumb-wrap  {
   //height: auto;
 }
 

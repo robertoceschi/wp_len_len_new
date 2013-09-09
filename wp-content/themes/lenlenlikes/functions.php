@@ -67,6 +67,8 @@
     //enable Featured Images in Posts and Pages
     add_theme_support( 'post-thumbnails' );
 
+    add_image_size( 'homepage-thumb', 360, auto ); // Soft Crop Mode
+
 
 
 

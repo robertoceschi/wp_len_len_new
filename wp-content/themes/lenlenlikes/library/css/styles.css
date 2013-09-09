@@ -930,13 +930,17 @@ body.active nav[role='navigation'] aside#categories ul li.cat-item a {
   margin: 1.5em auto;
 }
 
-/* line 438, ../sass/partials/_modules.scss */
+/* line 439, ../sass/partials/_modules.scss */
 #site-content {
   max-width: 100%;
   margin: 0;
 }
+/* line 444, ../sass/partials/_modules.scss */
+#site-content a {
+  border-bottom: none;
+}
 
-/* line 445, ../sass/partials/_modules.scss */
+/* line 450, ../sass/partials/_modules.scss */
 .item {
   display: block;
   float: left;
@@ -949,12 +953,12 @@ body.active nav[role='navigation'] aside#categories ul li.cat-item a {
   transition: left .4s ease-in-out, top .4s ease-in-out .4s;
 }
 
-/* line 459, ../sass/partials/_modules.scss */
+/* line 464, ../sass/partials/_modules.scss */
 .featured {
   width: 620px;
 }
 
-/* line 463, ../sass/partials/_modules.scss */
+/* line 468, ../sass/partials/_modules.scss */
 .item img {
   width: 360px;
   height: auto;
@@ -963,7 +967,7 @@ body.active nav[role='navigation'] aside#categories ul li.cat-item a {
   padding-bottom: 40px;
 }
 
-/* line 471, ../sass/partials/_modules.scss */
+/* line 476, ../sass/partials/_modules.scss */
 .featured img {
   width: 620px;
   height: auto;
@@ -972,23 +976,30 @@ body.active nav[role='navigation'] aside#categories ul li.cat-item a {
   padding-bottom: 40px;
 }
 
-/* line 479, ../sass/partials/_modules.scss */
+/* line 484, ../sass/partials/_modules.scss */
 .overlay {
   position: relative;
 }
 
-/* line 497, ../sass/partials/_modules.scss */
+/* line 502, ../sass/partials/_modules.scss */
 .overlay .entry-header {
   position: absolute;
-  top: 10px;
-  left: 3%;
+  top: 65px;
+  left: 5%;
   padding: 1px 10% 6px;
   background: rgba(255, 255, 255, 0.7);
   display: inline-block;
   max-width: 88%;
 }
 
-/* line 514, ../sass/partials/_modules.scss */
+/* line 512, ../sass/partials/_modules.scss */
+.overlay .entry-meta {
+  padding-top: 230px;
+  position: absolute;
+  padding-left: 50px;
+}
+
+/* line 524, ../sass/partials/_modules.scss */
 [data-icon]:before {
   font-family: 'icomoon';
   content: attr(data-icon);
@@ -1000,19 +1011,19 @@ body.active nav[role='navigation'] aside#categories ul li.cat-item a {
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 526, ../sass/partials/_modules.scss */
+/* line 536, ../sass/partials/_modules.scss */
 span.icon-heart {
   color: red;
   display: none;
 }
 
-/* line 533, ../sass/partials/_modules.scss */
+/* line 543, ../sass/partials/_modules.scss */
 .icon-arrow-down-alt1 {
   font-size: 2.5em;
   color: white;
 }
 
-/* line 539, ../sass/partials/_modules.scss */
+/* line 549, ../sass/partials/_modules.scss */
 #hidden_image {
   display: none;
 }
