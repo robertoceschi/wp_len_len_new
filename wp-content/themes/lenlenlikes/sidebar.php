@@ -49,8 +49,7 @@
                         <p>Curabitur blandit tempus porttitor. Curabitur porttitor. Cras
                             justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
                             consectetur
-                            ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-                            auctor.
+                            ac, vestibulum at eros.
                             Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi
                             erat
                             porttitor ligula, eget lacinia odio sem nec elit.</p>

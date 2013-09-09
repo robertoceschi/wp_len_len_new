@@ -441,6 +441,7 @@ body.active {
 }
 
 .item {
+  background-color: green;
   display: block;
   float: left;
   width: 260px;
@@ -497,7 +498,7 @@ span.icon-heart {
 //====================================================================
 .icon-arrow-down-alt1 {
   font-size: 2.5em;
-  color: white;
+  color: $color11;
 }
 
 

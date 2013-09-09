@@ -938,6 +938,7 @@ body.active nav[role='navigation'] aside#categories ul li.cat-item a {
 
 /* line 443, ../sass/partials/_modules.scss */
 .item {
+  background-color: green;
   display: block;
   float: left;
   width: 260px;
@@ -948,12 +949,12 @@ body.active nav[role='navigation'] aside#categories ul li.cat-item a {
   transition: left .4s ease-in-out, top .4s ease-in-out .4s;
 }
 
-/* line 456, ../sass/partials/_modules.scss */
+/* line 457, ../sass/partials/_modules.scss */
 .featured {
   width: 520px;
 }
 
-/* line 460, ../sass/partials/_modules.scss */
+/* line 461, ../sass/partials/_modules.scss */
 .item img {
   width: 260px;
   height: auto;
@@ -962,7 +963,7 @@ body.active nav[role='navigation'] aside#categories ul li.cat-item a {
   padding-bottom: 40px;
 }
 
-/* line 468, ../sass/partials/_modules.scss */
+/* line 469, ../sass/partials/_modules.scss */
 .featured img {
   width: 520px;
   height: auto;
@@ -971,7 +972,7 @@ body.active nav[role='navigation'] aside#categories ul li.cat-item a {
   padding-bottom: 40px;
 }
 
-/* line 479, ../sass/partials/_modules.scss */
+/* line 480, ../sass/partials/_modules.scss */
 [data-icon]:before {
   font-family: 'icomoon';
   content: attr(data-icon);
@@ -983,19 +984,19 @@ body.active nav[role='navigation'] aside#categories ul li.cat-item a {
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 491, ../sass/partials/_modules.scss */
+/* line 492, ../sass/partials/_modules.scss */
 span.icon-heart {
   color: red;
   display: none;
 }
 
-/* line 498, ../sass/partials/_modules.scss */
+/* line 499, ../sass/partials/_modules.scss */
 .icon-arrow-down-alt1 {
   font-size: 2.5em;
   color: white;
 }
 
-/* line 504, ../sass/partials/_modules.scss */
+/* line 505, ../sass/partials/_modules.scss */
 #hidden_image {
   display: none;
 }

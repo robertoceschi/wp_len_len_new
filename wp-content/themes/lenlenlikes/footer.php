@@ -1,5 +1,5 @@
-</div> <!--End Main Container-->
-</div> <!--End Inner Container-->
+</div>  <!--End Inner Container-->
+</div>  <!--End Fluid Container-->
 
 <?php wp_footer(); ?>
 
