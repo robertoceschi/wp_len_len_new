@@ -1027,3 +1027,18 @@ span.icon-heart {
 #hidden_image {
   display: none;
 }
+
+/* line 557, ../sass/partials/_modules.scss */
+#site-content header.entry-header {
+  padding-left: 2%;
+}
+@media (min-width: 80em) {
+  /* line 557, ../sass/partials/_modules.scss */
+  #site-content header.entry-header {
+    padding-top: 3.5%;
+  }
+}
+/* line 564, ../sass/partials/_modules.scss */
+#site-content div.entry-content {
+  padding-left: 2%;
+}

@@ -132,7 +132,7 @@ body.active {
       @include squish(1, 1, 9);
       margin-top: 5em;
       ul.sociallinks {
-        @extend ul.chapter-list;
+        //@extend ul.chapter-list;
         li {
           text-align: center;
           a {
@@ -212,7 +212,7 @@ body.active {
     // ====================================================================
     aside#search {
       @extend #sociallinks;
-      @extend ul.chapter-list;
+      //@extend ul.chapter-list;
     }
     /* Form wrapper styling */
     .form-wrapper {
@@ -548,4 +548,20 @@ span.icon-heart {
 
 #hidden_image {
   display: none;
+}
+
+//Main Content Fullwidth, Contact
+//
+
+#site-content {
+  header.entry-header {
+    padding-left: 2%;
+    @include at-breakpoint($L) {
+      padding-top: 3.5%;
+    }
+
+  }
+  div.entry-content {
+    padding-left: 2%;
+  }
 }
