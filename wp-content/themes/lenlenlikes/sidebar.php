@@ -74,36 +74,17 @@
 
             <aside id="categories" class="categories"><h3 class="one"><span>CATEGORIES</span></h3>
                 <ul>
-                    <li class="cat-item"><a href="http://themes.elmastudio.de/renkon/category/citylife/"
-                                            title="View all posts filed under Citylife">Citylife</a>
-                    </li>
-                    <li class="cat-item"><a href="http://themes.elmastudio.de/renkon/category/essays/"
-                                            title="View all posts filed under Essays">Essays</a>
-                    </li>
-                    <li class="cat-item"><a href="http://themes.elmastudio.de/renkon/category/featured/"
-                                                        title="View all posts filed under Featured">Featured</a>
-                    </li>
-                    <li class="cat-item"><a href="http://themes.elmastudio.de/renkon/category/food/"
-                                                       title="View all posts filed under Food">Food</a>
-                    </li>
-                    <li class="cat-item"><a href="http://themes.elmastudio.de/renkon/category/graphics/"
-                                                        title="View all posts filed under Graphics">Graphics</a><br>
-                    </li>
-                    <li class="cat-item"><a href="http://themes.elmastudio.de/renkon/category/nature/"
-                                                       title="View all posts filed under Nature">Nature</a>
-                    </li>
-                    <li class="cat-item"><a href="http://themes.elmastudio.de/renkon/category/places/"
-                                                        title="View all posts filed under Places">Places</a>
-                    </li>
-                    <li class="cat-item"><a href="http://themes.elmastudio.de/renkon/category/random/"
-                                                        title="View all posts filed under Random">Random</a>
-                    </li>
-                    <li class="cat-item"><a href="http://themes.elmastudio.de/renkon/category/slogans/"
-                                                        title="View all posts filed under Slogans">Slogans</a>
-                    </li>
-                    <li class="cat-item"><a href="http://themes.elmastudio.de/renkon/category/typography/"
-                                                        title="View all posts filed under Typography">Typography</a>
-                    </li>
+                    <?php
+                    $args = array(
+                        'orderby' => 'name',
+                        'parent'  => 0
+                    );
+                    $categories = get_categories($args);
+                    foreach ($categories as $category) {
+                        echo ' <li class="cat-item"><a href=" ' . get_category_link($category->term_id) . '" >'
+                            . $category->name . '</a><li/>';
+                    }
+                    ?>
                 </ul>
             </aside>
 
