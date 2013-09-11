@@ -1,6 +1,6 @@
 <?php
 /**
- * Full-With Page
+ * All Static - Sites Hauptemplate für statische Seiten
  *
  */
 
@@ -13,15 +13,17 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 
     <!--Start Main Content-->
-        <div id="site-content">
-            <header class="entry-header">
-                <h1 class="entry-title"><?php the_title(); ?></h1>
-            </header><!-- end .entry-header -->
-
-            <div class="entry-content ">
-                <?php the_content(); ?>
-            </div><!-- end .entry-content -->
+    <div id="site-content">
+        <div class="entry-header">
+            <h1 class="entry-title"><?php the_title(); ?></h1>
         </div>
+        <!-- end .entry-header -->
+
+        <div class="entry-content ">
+            <?php the_content(); ?>
+        </div>
+        <!-- end .entry-content -->
+    </div>
     <!--End Main Content-->
 
 <?php endwhile; else: ?>

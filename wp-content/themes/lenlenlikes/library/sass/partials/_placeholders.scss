@@ -1,5 +1,5 @@
 %clearfix {
-  @include clearfix;
+@include clearfix;
 }
 %remove-margin-top {
   margin-top: 0;
@@ -7,3 +7,4 @@
 %single-transition {
   @include single-transition(all, .3s, ease, 0s);
 }
+

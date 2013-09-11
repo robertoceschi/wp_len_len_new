@@ -1,7 +1,6 @@
 <?php
 /**
- * Home-Site
- *
+ * Template Name: Home-Site Template, Template für die Start-Seite
  */
 
 
@@ -31,9 +30,9 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
     // no posts found
 <?php endif; ?>
 
-
     <div id="content" class="container clearfix">
         <div id="site-content">
+
             <?php
             $linksPosts = new WP_Query('posts_per_page=9');
             ?>
@@ -46,15 +45,15 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                                                        rel="bookmark"><?php the_title(); ?></a></h2>
                         </header>
                         <!--<footer class="entry-meta">
-                            <div class="entry-date"><a href="<?php the_permalink(); ?>"><?php echo get_the_date(
-                                    ); ?></a></div>
-                            <div class="entry-comments">
-                                <?php comments_popup_link(); ?>
-                            </div>
-                            <div class="view-post"><a href="<?php the_permalink(); ?>" title=""><?php _e(
-                                        'View Post', 'renkon'
-                                    ) ?></a></div>
-                        </footer>-->
+                                <div class="entry-date"><a href="<?php the_permalink(); ?>"><?php echo get_the_date(
+                                        ); ?></a></div>
+                                <div class="entry-comments">
+                                    <?php comments_popup_link(); ?>
+                                </div>
+                                <div class="view-post"><a href="<?php the_permalink(); ?>" title=""><?php _e(
+                                            'View Post', 'renkon'
+                                        ) ?></a></div>
+                            </footer>-->
                     </div>
                     <!--Link zum Post -->
                     <div class="thumb-wrap">

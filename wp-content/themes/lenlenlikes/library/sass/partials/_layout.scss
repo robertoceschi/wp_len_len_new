@@ -26,8 +26,11 @@ $legacy-support-for-ie: false;
 $legacy-support-for-ie6: $legacy-support-for-ie;
 $legacy-support-for-ie7: $legacy-support-for-ie;
 
+
 // Breakpoint variables
 // ====================================================================
+$XS: 18em;
+// roughly speaking, around 288px wide with 16px body font
 $S: 35em;
 // roughly speaking, around 370px wide with 16px body font
 $M: 47em;
@@ -47,7 +50,7 @@ $XL: 90em;
 
 [class^="inner"] {
   @include container;
-  //@include susy-grid-background;
+
   overflow: hidden;
 }
 
@@ -70,7 +73,6 @@ $XL: 90em;
   }
   // If button in the 'off-canvas-navigation' area is clicked, 'active' class is applied to the body so the following styles are applied
   .active & {
-
     margin-left: 0;
     @include span-columns(10, 12);
   }
@@ -79,6 +81,8 @@ $XL: 90em;
 }
 
 .main-content {
+  //@include susy-grid-background;
+
   @extend %single-transition;
   // Accessibility layout - shows when no JavaScript
   @include span-columns(12, 12);
@@ -95,6 +99,27 @@ $XL: 90em;
   }
 
 }
+
+//Layout of Main-Content exclude Front-Page
+div #site-content {
+  min-height: 700px;
+  @include pad(1, 1);
+  @include at-breakpoint($M) {
+    @include pad(2, 2);
+    div.entry-header {
+      @include at-breakpoint($L) {
+      }
+    }
+  }
+}
+
+//Layout Single-Post
+
+  .entry-content {
+    text-align: center;
+    margin-top: 5%;
+    min-height: 600px;
+  }
 
 // The footer section
 [role="contentinfo"] {

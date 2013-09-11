@@ -50,6 +50,7 @@
     <!--Start Inner Container-->
     <div class="inner-content">
         <?php get_sidebar(); ?>
+
         <!--End OFF-Canvas part left -->
             <!--Start Main Content -->
             <div role="main" class="main-content">
@@ -62,5 +63,5 @@
                         <h1 class="main-link-headline"><a href="<?php echo home_url('/'); ?>
     "><?php bloginfo('name'); ?></a></h1>
                     </div>
-
+                    <?php get_sidebar(); ?>
                 </header>

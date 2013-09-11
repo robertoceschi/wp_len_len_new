@@ -450,7 +450,7 @@ body.active {
 .item {
   display: block;
   float: left;
-  width: 360px;
+  width: 355px;
   height: auto;
   //margin: 0 20px 20px 0;
   -webkit-transition: left .4s ease-in-out, top .4s ease-in-out .4s;
@@ -466,7 +466,7 @@ body.active {
 }
 
 .item img {
-  width: 360px;
+  width: 355px;
   height: auto;
   padding-right: 20px;
   padding-left: 20px;
@@ -516,8 +516,9 @@ body.active {
   }
 
 .thumb-wrap  {
-  //height: auto;
 }
+
+
 
 // Styling Icons
 // ====================================================================
@@ -548,20 +549,4 @@ span.icon-heart {
 
 #hidden_image {
   display: none;
-}
-
-//Main Content Fullwidth, Contact
-//
-
-#site-content {
-  header.entry-header {
-    padding-left: 2%;
-    @include at-breakpoint($L) {
-      padding-top: 3.5%;
-    }
-
-  }
-  div.entry-content {
-    padding-left: 2%;
-  }
 }
