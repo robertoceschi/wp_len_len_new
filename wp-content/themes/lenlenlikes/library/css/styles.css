@@ -1045,7 +1045,7 @@ body.active nav[role='navigation'] aside#categories ul li.cat-item a {
 
 /* line 537, ../sass/partials/_modules.scss */
 span.icon-heart {
-  color: red;
+  color: white;
   display: none;
 }
 
