@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Home-Site Template, Template für die Start-Seite
+ * Template Name: Home Template
  */
 
 

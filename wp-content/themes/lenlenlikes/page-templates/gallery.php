@@ -1,7 +1,6 @@
 <?php
 /**
- *  Template Name: Gallery-Template, für Bild Impression/Galerie-Seiten
- *
+ *  Template Name: Gallery Template
  *
  *
  */
