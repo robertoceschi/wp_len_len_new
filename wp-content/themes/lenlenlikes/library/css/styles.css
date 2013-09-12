@@ -460,14 +460,14 @@ a {
 }
 
 /* line 104, ../sass/partials/_layout.scss */
-div #site-content {
+div#site-content {
   min-height: 700px;
   padding-left: 8.4507%;
   padding-right: 8.4507%;
 }
 @media (min-width: 47em) {
   /* line 104, ../sass/partials/_layout.scss */
-  div #site-content {
+  div#site-content {
     padding-left: 22.64151%;
     padding-right: 22.64151%;
   }
@@ -484,6 +484,17 @@ div #site-content {
 [role="contentinfo"] {
   clear: both;
   margin-top: 3em;
+}
+
+/* line 133, ../sass/partials/_layout.scss */
+.archive-header {
+  margin-top: 80px;
+  margin-left: 190px;
+}
+
+/* line 140, ../sass/partials/_layout.scss */
+body.archive div#content {
+  margin-top: 5%;
 }
 
 /* line 4, ../sass/partials/_modules.scss */

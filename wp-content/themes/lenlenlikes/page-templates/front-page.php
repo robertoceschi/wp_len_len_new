@@ -34,7 +34,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
         <div id="site-content">
 
             <?php
-            $linksPosts = new WP_Query('posts_per_page=9');
+            $linksPosts = new WP_Query('posts_per_page=10');
             ?>
             <?php while ($linksPosts->have_posts()) :
                 $linksPosts->the_post(); ?>

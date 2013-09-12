@@ -25,7 +25,9 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
             </div>
             <?php the_content(); ?>
         </div>
-        Posted in:<?php the_category() ;?>
+        Posted in:<?php the_category() ;?><br>
+        <?php the_tags(); ?>
+
 
         <!-- Comments template wird geladen-->
         <?php comments_template(); ?>
