@@ -69,6 +69,7 @@
             <aside id="categories" class="categories"><h3 class="one"><span>CATEGORIES</span></h3>
                 <ul>
                     <?php
+
                     $args = array(
                         'orderby' => 'name',
                         'parent'  => 0
@@ -81,5 +82,8 @@
                     ?>
                 </ul>
             </aside>
-
         </nav>
+
+<script>
+    jQuery("aside#categories.categories ul li:nth-child(2n)").css("display", 'none');
+</script>
