@@ -66,10 +66,7 @@
             </aside>
 
             <aside id="search" class="search"><h3 class="one"><span>SEARCH</span></h3>
-                <form class="form-wrapper cf">
-                    <input type="text" placeholder="Search..." required>
-                    <button type="submit">Search</button>
-                </form>
+                <?php get_template_part ('content', 'searchform'); ?>
             </aside>
 
             <aside id="categories" class="categories"><h3 class="one"><span>CATEGORIES</span></h3>

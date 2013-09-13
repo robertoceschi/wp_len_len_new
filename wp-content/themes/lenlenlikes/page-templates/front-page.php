@@ -40,6 +40,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                 $linksPosts->the_post(); ?>
                 <article id="post-<?php the_ID(); ?>" class="item">
                     <div class="overlay">
+
                         <header class="entry-header">
                             <h2 class="entry-title"><a href="<?php the_permalink(); ?>" title=""
                                                        rel="bookmark"><?php the_title(); ?></a></h2>

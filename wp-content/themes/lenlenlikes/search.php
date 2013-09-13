@@ -1,36 +1,52 @@
 <?php
 /**
- * The template for displaying Search Results pages.
+ * The template for displaying search results.
  *
- * @package WordPress
- * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
+ * @package Renkon
+ * @since Renkon 1.0
  */
 
 get_header(); ?>
 
-    <div id="primary" class="content-area">
-        <div id="content" class="site-content" role="main">
+<?php if ( have_posts() ) : ?>
+    <header class="archive-header">
+        <h2 class="archive-title"><?php echo $wp_query->found_posts; ?> <?php printf( __( '<span>Search Results for</span> &lsquo;%s&rsquo;', 'renkon' ), '' . get_search_query() . '' ); ?></h2>
+    </header><!--end .archive-header -->
 
-            <?php if ( have_posts() ) : ?>
+    <div id="site-content">
 
-                <header class="page-header">
-                    <h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'twentythirteen' ), get_search_query() ); ?></h1>
-                </header>
+        <?php /* Start the Loop */ ?>
+        <?php while ( have_posts() ) : the_post(); ?>
+            <?php	get_template_part( 'content', get_post_format() ); ?>
+        <?php endwhile; // end of the loop. ?>
 
-                <?php /* The loop */ ?>
-                <?php while ( have_posts() ) : the_post(); ?>
-                    <?php get_template_part( 'content', get_post_format() ); ?>
-                <?php endwhile; ?>
+    </div><!--end #site-content -->
 
-                <?php twentythirteen_paging_nav(); ?>
+    <?php /* Display navigation to next/previous pages when applicable, also check if WP pagenavi plugin is activated */ ?>
+    <?php if(function_exists('wp_pagenavi')) : wp_pagenavi(); else: ?>
+        <?php renkon_content_nav( 'nav-below' ); ?>
+    <?php endif; ?>
 
-            <?php else : ?>
-                <?php get_template_part( 'content', 'none' ); ?>
-            <?php endif; ?>
+<?php else : ?>
 
-        </div><!-- #content -->
-    </div><!-- #primary -->
+
+    <article id="post-0" class="page no-results not-found">
+        <header class="archive-header">
+            <h2 class="archive-title"><?php _e( 'Nothing Found', 'renkon' ); ?></h2>
+        </header><!--end .archive-header -->
+
+        <div class="entry-content">
+            <p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'renkon' ); ?></p>
+            <?php get_search_form(); ?>
+        </div><!-- end .entry-content -->
+    </article>
+
+<?php endif; ?>
+
+    </div><!-- end .content-wrap -->
+
+<?php get_template_part( 'colophon' ); ?>
+
+    </div><!-- end .container -->
 
 <?php get_sidebar(); ?>
-<?php get_footer(); ?>
