@@ -15,12 +15,12 @@ get_header(); ?>
 
 <div class="archive-header">
     <?php if (is_category()) { ?>
-        <h2 class="entry-title"> <?php _e('Category: ', 'lenlenlikes');
+        <h2 class="entry-title"><?php
             single_cat_title(); ?></h2>
     <?php
     } elseif (is_tag()) {
         ?>
-        <h2 class="entry-title"><?php _e('Posts Tagged as: ', 'lenlenlikes');
+        <h2 class="entry-title"><?php _e('Tagged: ', 'lenlenlikes');
             single_tag_title(); ?></h2>
     <?php
     } elseif (is_month()) {

@@ -34,36 +34,33 @@
                 </ul>
                 <!-- end .sociallinks -->
             </aside>
+            <?php if (have_posts()) : while (have_posts()) : the_post();
+                $image = get_field('picture');
+                $subtext = get_field('subtext');
+                $maintext = get_field('maintext');
 
+
+                ?>
             <aside id="about_me"><h3 class="one"><span>ABOUT ME</span></h3>
                 <div class="about-widget-container">
                     <div class="about-img-wrap">
-                        <img src="http://themes.elmastudio.de/renkon/files/2013/04/about-image.png" width="180"
+                        <img src="<?php echo $image; ?>" width="180"
                              height="180"
                              class="about-image" alt="Main Content Picture">
 
-                        <p>"Morbi leo risus, porta ac consectetur ac, vestibulum at eros."</p>
+                        <p><?php echo $subtext;?></p>
                     </div>
                     <!-- end .about-img-wrap -->
                     <div class="about-text-wrap">
-                        <p>Curabitur blandit tempus porttitor. Curabitur porttitor. Cras
-                            justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-                            consectetur
-                            ac, vestibulum at eros.
-                            Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi
-                            erat
-                            porttitor ligula, eget lacinia odio sem nec elit.</p>
-
-                        <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non
-                            metus
-                            auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor
-                            sit
-                            amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.</p>
+                        <p><?php echo $maintext; ?></p>
                     </div>
                     <!-- end .about-text-wrap -->
                 </div>
 
             </aside>
+        <?php endwhile; ?>
+            <?php endif; ?>
+
 
             <aside id="search" class="search"><h3 class="one"><span>SEARCH</span></h3>
                 <?php get_template_part ('content', 'searchform'); ?>

@@ -23,7 +23,7 @@ get_header(); ?>
 
 <?php if (have_posts()) : ?>
 
-    <h2><?php echo $wp_query->found_posts; ?> <?php printf(__('Search Results for: %s', 'lenlenlikes'), get_search_query()); ?></h2>
+    <h2><?php echo $wp_query->found_posts; ?><?php printf(__(' Search Results for: %s', 'lenlenlikes'), get_search_query()); ?></h2>
     </div>
 
 <?php endif; ?>
@@ -64,9 +64,24 @@ get_header(); ?>
                     </div>
                 </article>
 
+
             <?php endwhile; else: ?>
-                // no posts found
+                <article id="post-0" class="item">
+                    <div class="overlay">
+                        <header class="entry-header">
+                            <h2 class="entry-title"><?php _e( 'Nothing Found', 'lenlenlikes' ); ?></h2>
+                        </header>
+                        <p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'renkon' ); ?></p>
+                    </div>
+                    <!--Link zum Post -->
+                    <aside id="search" class="search">
+                        <?php get_template_part ('content', 'searchform'); ?>
+                    </aside>
+                </article>
             <?php endif; ?>
+
+
+
         </div>
     </div>
 

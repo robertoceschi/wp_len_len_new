@@ -23,7 +23,7 @@ get_header(); ?>
         <?php
         } elseif (is_tag()) {
             ?>
-            <h2 class="entry-title"><?php _e('Posts Tagged as: ', 'lenlenlikes');
+            <h2 class="entry-title"><?php _e('Tagged: ', 'lenlenlikes');
                 single_tag_title(); ?></h2>
         <?php
         } elseif (is_month()) {
