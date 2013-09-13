@@ -3,50 +3,72 @@
  * The template for displaying search results.
  *
  * @package Renkon
- * @since Renkon 1.0
+ * @since   Renkon 1.0
  */
 
 get_header(); ?>
 
-<?php if ( have_posts() ) : ?>
-    <header class="archive-header">
-        <h2 class="archive-title"><?php echo $wp_query->found_posts; ?> <?php printf( __( '<span>Search Results for</span> &lsquo;%s&rsquo;', 'renkon' ), '' . get_search_query() . '' ); ?></h2>
-    </header><!--end .archive-header -->
+<?php
+/**
+ * The template for displaying Search Results pages.
+ *
+ * @package    WordPress
+ * @subpackage Twenty_Thirteen
+ * @since      Twenty Thirteen 1.0
+ */
 
-    <div id="site-content">
+get_header(); ?>
 
-        <?php /* Start the Loop */ ?>
-        <?php while ( have_posts() ) : the_post(); ?>
-            <?php	get_template_part( 'content', get_post_format() ); ?>
-        <?php endwhile; // end of the loop. ?>
+<div class="archive-header">
 
-    </div><!--end #site-content -->
+<?php if (have_posts()) : ?>
 
-    <?php /* Display navigation to next/previous pages when applicable, also check if WP pagenavi plugin is activated */ ?>
-    <?php if(function_exists('wp_pagenavi')) : wp_pagenavi(); else: ?>
-        <?php renkon_content_nav( 'nav-below' ); ?>
-    <?php endif; ?>
-
-<?php else : ?>
-
-
-    <article id="post-0" class="page no-results not-found">
-        <header class="archive-header">
-            <h2 class="archive-title"><?php _e( 'Nothing Found', 'renkon' ); ?></h2>
-        </header><!--end .archive-header -->
-
-        <div class="entry-content">
-            <p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'renkon' ); ?></p>
-            <?php get_search_form(); ?>
-        </div><!-- end .entry-content -->
-    </article>
+    <h2><?php echo $wp_query->found_posts; ?> <?php printf(__('Search Results for: %s', 'lenlenlikes'), get_search_query()); ?></h2>
+    </div>
 
 <?php endif; ?>
 
-    </div><!-- end .content-wrap -->
+    <!--Start Main Content-->
+    <div id="content">
 
-<?php get_template_part( 'colophon' ); ?>
+        <div id="site-content">
 
-    </div><!-- end .container -->
+            <?php
+
+            if (have_posts()) : while (have_posts()) : the_post();
+                ?>
+
+                <!-- end .entry-header -->
+                <article id="post-0" class="item">
+                    <div class="overlay">
+                        <header class="entry-header">
+                            <h2 class="entry-title"><a href="<?php the_permalink(); ?>" title=""
+                                                       rel="bookmark"><?php the_title(); ?></a></h2>
+                        </header>
+                        <!--<footer class="entry-meta">
+                                        <div class="entry-date"><a href="<?php the_permalink(); ?>"><?php echo get_the_date(
+                                                ); ?></a></div>
+                                        <div class="entry-comments">
+                                            <?php comments_popup_link(); ?>
+                                        </div>
+                                        <div class="view-post"><a href="<?php the_permalink(); ?>" title=""><?php _e(
+                                                    'View Post', 'renkon'
+                                                ) ?></a></div>
+                                    </footer>-->
+                    </div>
+                    <!--Link zum Post -->
+                    <div class="thumb-wrap">
+                        <a href="<?php the_permalink(); ?>" class="thumb"><?php the_post_thumbnail(
+                                'homepage-thumb'
+                            ); ?></a>
+                    </div>
+                </article>
+
+            <?php endwhile; else: ?>
+                // no posts found
+            <?php endif; ?>
+        </div>
+    </div>
 
 <?php get_sidebar(); ?>
+<?php get_footer(); ?>
