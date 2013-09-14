@@ -17,6 +17,9 @@ jQuery(window).resize(function () {
     }
 });
 jQuery(document).ready(function ($) {
+    //Hide OffCanvas Section till body is loaded
+    jQuery('nav[role="navigation"]').css('display', 'block');
+
 
     // Hauptbild auf der Home-Site wird als CSS-Background-Image ausgegeben
     var image_src = jQuery("#hidden_image img").attr('src');

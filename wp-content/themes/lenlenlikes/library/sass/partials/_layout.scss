@@ -57,8 +57,9 @@ $XL: 90em;
 .inner-content {
   //padding-top: 4em;
 }
-
-[role="navigation"] {
+nav[role="navigation"] {
+  //Hide OffCanvas Section till body is loaded
+  display: none;
   @extend %single-transition;
 
   // Accessibility layout - shows when no JavaScript
@@ -139,9 +140,6 @@ body.archive {
 
   div#content {
     margin-top: 5%;
-
-
-
     }
   }
 
