@@ -69,21 +69,16 @@
             <aside id="categories" class="categories"><h3 class="one"><span>CATEGORIES</span></h3>
                 <ul>
                     <?php
-
                     $args = array(
-                        'orderby' => 'name',
+                        'oderby' => 'name',
                         'parent'  => 0
                     );
                     $categories = get_categories($args);
                     foreach ($categories as $category) {
-                        echo ' <li class="cat-item"><a href=" ' . get_category_link($category->term_id) . '" >'
-                            . $category->name . '</a><li/>';
+                        echo '<li class="cat-item"><a href=" ' . get_category_link($category->term_id) . '" >'
+                            . $category->name . '</a></li>';
                     }
                     ?>
                 </ul>
             </aside>
         </nav>
-
-<script>
-    jQuery("aside#categories.categories ul li:nth-child(2n)").css("display", 'none');
-</script>
