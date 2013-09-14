@@ -7,6 +7,7 @@ var showSidebar = function () {
     }
     if (!$target.hasClass('active')) {
         jQuery('.main-link-headline').css('display', 'block');
+
     }
 };
 // add/remove classes everytime the window resize event fires
