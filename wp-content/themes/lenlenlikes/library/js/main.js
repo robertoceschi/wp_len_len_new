@@ -4,11 +4,11 @@ var showSidebar = function () {
     //Anpassungen für OFF-CanvasBanner
     if ($target.hasClass('active')) {
         jQuery('.main-link-headline').css('display', 'none');
-        //jQuery('nav[role="navigation"]').css('display', 'block');
+        jQuery('nav[role="navigation"]').css('display', 'block');
     }
     if (!$target.hasClass('active')) {
         jQuery('.main-link-headline').css('display', 'block');
-        //jQuery('nav[role="navigation"]').css('display', 'none');
+        jQuery('nav[role="navigation"]').css('display', 'none');
 
 
 
@@ -23,7 +23,7 @@ jQuery(window).resize(function () {
 });
 jQuery(document).ready(function ($) {
     //Hide OffCanvas Section till body is loaded
-     jQuery('nav[role="navigation"]').css('display', 'block');
+     //jQuery('nav[role="navigation"]').css('display', 'block');
 
 
     // Hauptbild auf der Home-Site wird als CSS-Background-Image ausgegeben

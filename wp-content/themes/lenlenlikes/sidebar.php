@@ -30,7 +30,6 @@
                                                                                                data-icon="&#xe001;"
                                                                                                class="icon-instagram"></span></a>
                     </li>
-
                 </ul>
                 <!-- end .sociallinks -->
             </aside>
