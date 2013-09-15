@@ -77,6 +77,12 @@ function len_len_theme_setup() {
 }
 
 
+/**
+ * Custom Post Type About Me
+ *
+ *
+ */
+
 add_action( 'init', 'create_my_post_type' );
 
 function create_my_post_type() {
@@ -84,8 +90,7 @@ function create_my_post_type() {
         array(
              'labels' => array(
                  'name' => __( 'About Me' ),
-                 'singular_name' => __( '' ),
-                 'add_new' => ('')
+                 'add_new' => (''),
 
              ),
              'public' => true,
@@ -93,3 +98,20 @@ function create_my_post_type() {
     );
 }
 
+/**
+ * Removing Permalinks in Custom Post Type About Me
+ *
+ *
+ */
+
+    add_filter('get_sample_permalink_html', 'perm', '',4);
+
+    function perm($return, $id, $new_title, $new_slug){
+        global $post;
+        if($post->post_type == 'about')
+        {
+            $ret2 = preg_replace('/<div id="edit-slug-box</div><span id="edit-slug-buttons">.*<\/span>|<span id=\'view-post-btn\'>.*<\/span>/i', '', $return);
+        }
+
+        return $ret2;
+    }
