@@ -77,3 +77,19 @@ function len_len_theme_setup() {
 }
 
 
+add_action( 'init', 'create_my_post_type' );
+
+function create_my_post_type() {
+    register_post_type( 'about',
+        array(
+             'labels' => array(
+                 'name' => __( 'About Me' ),
+                 'singular_name' => __( '' ),
+                 'add_new' => ('')
+
+             ),
+             'public' => true,
+        )
+    );
+}
+

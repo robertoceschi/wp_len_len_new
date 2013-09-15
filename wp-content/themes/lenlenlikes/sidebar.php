@@ -34,7 +34,11 @@
                 </ul>
                 <!-- end .sociallinks -->
             </aside>
-            <?php if (have_posts()) : while (have_posts()) : the_post();
+            <?php
+            $the_query = new WP_Query('post_type');
+
+
+             while ($the_query->have_posts()) : $the_query->the_post();
                 $image = get_field('picture');
                 $subtext = get_field('subtext');
                 $maintext = get_field('maintext');
