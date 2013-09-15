@@ -35,7 +35,7 @@
                 <!-- end .sociallinks -->
             </aside>
             <?php
-            $the_query = new WP_Query('post_type');
+            $the_query = new WP_Query(post_type => about);
 
 
              while ($the_query->have_posts()) : $the_query->the_post();
