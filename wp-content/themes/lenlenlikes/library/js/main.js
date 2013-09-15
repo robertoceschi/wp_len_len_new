@@ -9,9 +9,6 @@ var showSidebar = function () {
     if (!$target.hasClass('active')) {
         jQuery('.main-link-headline').css('display', 'block');
         jQuery('nav[role="navigation"]').css('display', 'none');
-
-
-
     }
 };
 // add/remove classes everytime the window resize event fires
