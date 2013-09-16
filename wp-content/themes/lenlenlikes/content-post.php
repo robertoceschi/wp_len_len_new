@@ -21,7 +21,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
             <!-- end .entry-header -->
 
             <div class="thumb-wrap">
-                <a href="<?php the_permalink(); ?>" class="thumb"><?php the_post_thumbnail('homepage-thumb'); ?></a>
+                <a href="<?php the_permalink(); ?>" class="thumb"><?php the_post_thumbnail('homepage-thumb_big'); ?></a>
             </div>
             <?php the_content(); ?>
         </div>

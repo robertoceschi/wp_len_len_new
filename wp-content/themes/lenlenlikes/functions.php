@@ -74,6 +74,7 @@ function len_len_theme_setup() {
     add_theme_support('post-thumbnails');
     //changing standart Thumb-Size for Masonry
     add_image_size('homepage-thumb', 360, auto); // Soft Crop Mode
+    add_image_size('homepage-thumb_big', 900, auto); // Soft Crop Mode
 }
 
 
