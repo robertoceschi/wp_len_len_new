@@ -502,33 +502,55 @@ nav[role="navigation"] {
 @media (min-width: 35em) {
   /* line 49, ../sass/partials/_layout_post_page.scss */
   #page_post_content article.post {
-    padding-left: 8.69565%;
-    padding-right: 8.69565%;
+    width: 82.6087%;
+    float: left;
+    margin-right: 4.34783%;
+    margin-left: 8.69565%;
+    margin-right: 8.69565%;
   }
 }
 @media (min-width: 47em) {
   /* line 49, ../sass/partials/_layout_post_page.scss */
   #page_post_content article.post {
-    padding-left: 17.3913%;
-    padding-right: 17.3913%;
+    width: 65.21739%;
+    float: left;
+    margin-right: 4.34783%;
+    margin-left: 17.3913%;
+    margin-right: 17.3913%;
   }
 }
 @media (min-width: 80em) {
   /* line 49, ../sass/partials/_layout_post_page.scss */
   #page_post_content article.post {
-    padding-left: 26.08696%;
-    padding-right: 26.08696%;
+    width: 65.21739%;
+    float: left;
+    margin-right: 4.34783%;
+    margin-left: 17.3913%;
+    margin-right: 17.3913%;
+  }
+}
+@media (min-width: 90em) {
+  /* line 49, ../sass/partials/_layout_post_page.scss */
+  #page_post_content article.post {
+    width: 65.21739%;
+    float: left;
+    margin-right: 4.34783%;
+    margin-left: 17.3913%;
+    margin-right: 17.3913%;
   }
 }
 @media (min-width: 100em) {
   /* line 49, ../sass/partials/_layout_post_page.scss */
   #page_post_content article.post {
-    padding-left: 17.3913%;
-    padding-right: 17.3913%;
+    width: 47.82609%;
+    float: left;
+    margin-right: 4.34783%;
+    margin-left: 26.08696%;
+    margin-right: 26.08696%;
   }
 }
-/* line 67, ../sass/partials/_layout_post_page.scss */
-#page_post_content article.post div.entry-content div.image_text a img {
+/* line 78, ../sass/partials/_layout_post_page.scss */
+#page_post_content div.entry-content div.image_text a img {
   max-width: 100%;
   height: auto;
 }
