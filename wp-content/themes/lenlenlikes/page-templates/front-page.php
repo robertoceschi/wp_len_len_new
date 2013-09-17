@@ -30,7 +30,8 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
     // no posts found
 <?php endif; ?>
 
-    <div id="content" class="container clearfix">
+
+
         <div id="site-content">
 
             <?php

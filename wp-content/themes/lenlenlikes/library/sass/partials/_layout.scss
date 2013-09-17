@@ -34,114 +34,99 @@ $XS: 18em;
 $S: 35em;
 // roughly speaking, around 370px wide with 16px body font
 $M: 47em;
-// roughly speaking, around 750px wide with 16px body font
+// roughly speaking, around 750px wide with 16px body font (tablets portrait)
 $L: 80em;
-// roughly speaking, around 1200px wide with 16px body font
+// roughly speaking, around 1200px wide with 16px body font (tablets landscape) (smaller laptops)
 $XL: 90em;
-// roughly speaking, around 1400px wide with 16px body font
+// roughly speaking, around 1400px wide with 16px body font (standard laptops)
+$XXL: 100em;
+// Minimum width of 1800 pixels (bigger desktop screens)
 
-.fluid-container {
-  @include container;
-}
 
-* {
-  @include border-box-sizing;
-}
-
-[class^="inner"] {
-  @include container;
-
-  overflow: hidden;
-}
-
-.inner-content {
-  //padding-top: 4em;
-}
-nav[role="navigation"] {
-  //Hide OffCanvas Section till body is loaded
-  display: none;
-  @extend %single-transition;
-
-  // Accessibility layout - shows when no JavaScript
-  @include span-columns(12, 12);
-
-  // If JavaScript present, hide this section 'off-canvas'
-  .js & {
-    margin-left: -100%;
-    @include span-columns(5, 12);
-    float: left;
-    z-index: 2;
-  }
-  // If button in the 'off-canvas-navigation' area is clicked, 'active' class is applied to the body so the following styles are applied
-  .active & {
-    margin-left: 0;
-    @include span-columns(10, 12);
+  .fluid-container {
+    @include container;
   }
 
-
-}
-
-.main-content {
-  //@include susy-grid-background;
-
-  @extend %single-transition;
-  // Accessibility layout - shows when no JavaScript
-  @include span-columns(12, 12);
-
-  // If JavaScript present, apply these rules:
-  .js & {
-    margin-left: 0;
-    float: left;
-    z-index: 1;
-  }
-  // If button in the 'off-canvas-navigation' area is clicked, 'active' class is applied to the body so the following styles are applied
-  .active & {
-    margin-right: -100%;
+  * {
+    @include border-box-sizing;
   }
 
-}
+  [class^="inner"] {
+    @include container;
 
-//Layout of Main-Content exclude Front-Page
-div#site-content {
-  min-height: 700px;
-  @include pad(1, 1);
-  @include at-breakpoint($M) {
-    @include pad(2, 2);
-    div.entry-header {
-      @include at-breakpoint($L) {
-      }
+    overflow: hidden;
+  }
+
+  .inner-content {
+    //padding-top: 4em;
+  }
+  nav[role="navigation"] {
+    //Hide OffCanvas Section till body is loaded
+    display: none;
+    @extend %single-transition;
+
+    // Accessibility layout - shows when no JavaScript
+    @include span-columns(12, 12);
+
+    // If JavaScript present, hide this section 'off-canvas'
+    .js & {
+      margin-left: -100%;
+      @include span-columns(5, 12);
+      float: left;
+      z-index: 2;
     }
-  }
-}
-
-//Layout Single-Post
-
-  .entry-content {
-    text-align: center;
-    margin-top: 5%;
-    min-height: 600px;
-  }
-
-// The footer section
-[role="contentinfo"] {
-  clear: both;
-  margin-top: 3em;
-}
-
-
-//Layout Archive Site
-
-.archive-header {
-  margin-top: 80px;
-  margin-left: 190px;
-}
-
-body.archive {
-
-  div#content {
-    margin-top: 5%;
+    // If button in the 'off-canvas-navigation' area is clicked, 'active' class is applied to the body so the following styles are applied
+    .active & {
+      margin-left: 0;
+      @include span-columns(10, 12);
     }
+
+
   }
+
+  .main-content {
+    //@include susy-grid-background;
+
+    @extend %single-transition;
+    // Accessibility layout - shows when no JavaScript
+    @include span-columns(12, 12);
+
+    // If JavaScript present, apply these rules:
+    .js & {
+      margin-left: 0;
+      float: left;
+      z-index: 1;
+    }
+    // If button in the 'off-canvas-navigation' area is clicked, 'active' class is applied to the body so the following styles are applied
+    .active & {
+      margin-right: -100%;
+    }
+
+  }
+
+
+
+
+
+
+
+
+
+
+  //Layout Single-Post
+
+
+
+  // The footer section
+  [role="contentinfo"] {
+    clear: both;
+    margin-top: 3em;
+  }
+
+
+  //Layout Archive Site
+
+
 
 
 
