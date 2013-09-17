@@ -1,0 +1,117 @@
+// ====================================================================
+// Layout styles, should only contain rules relating to the structure
+// ====================================================================
+// Grid layout variables (http://susy.oddbird.net/)
+// ====================================================================
+@import "susy";
+@import "compass/css3";
+
+$total-columns: 12;
+// a 12-column grid
+$column-width: 1em;
+// each column is 5em wide
+$gutter-width: 1em;
+// 1em Gutter between columns
+$grid-padding: 0.5em;
+//no padding
+
+$container-style: fluid;
+
+$border-box-sizing: true;
+// If you weren't setting border-box as the box-sizing elsewhere, you could uncomment the following mixin and remove the variable above:
+// @include border-box-sizing;
+
+//Switch off support for legacy Internet Explorer
+$legacy-support-for-ie: false;
+$legacy-support-for-ie6: $legacy-support-for-ie;
+$legacy-support-for-ie7: $legacy-support-for-ie;
+
+
+// Breakpoint variables
+// ====================================================================
+$XS: 18em;
+// roughly speaking, around 288px wide with 16px body font
+$S: 35em;
+// roughly speaking, around 560px wide with 16px body font
+$M: 47em;
+// roughly speaking, around 750px wide with 16px body font (tablets portrait)
+$L: 80em;
+// roughly speaking, around 1280px wide with 16px body font (tablets landscape) (smaller laptops)
+$XL: 90em;
+// roughly speaking, around 1400px wide with 16px body font (standard laptops)
+$XXL: 100em;
+// Minimum width of 1800 pixels (bigger desktop screens)
+
+//Layout of Post/Page Sites
+#page_post_content {
+  margin-top: -30px;
+  @include container;
+  article.post {
+
+    text-align: center;
+    @include span-columns(12, 12);
+    @include at-breakpoint($S) {
+      @include span-columns(10, 12);
+      @include squish(1, 1, 12);
+    }
+    @include at-breakpoint($M) {
+      @include span-columns(8, 12);
+      @include squish(2, 2, 12);
+    }
+
+    @include at-breakpoint($L) {
+      @include span-columns(8, 12);
+      @include squish(2, 2, 12);
+    }
+    @include at-breakpoint($XL) {
+      @include span-columns(8, 12);
+      @include squish(2, 2, 12);
+    }
+    @include at-breakpoint($XXL) {
+      @include span-columns(6, 12);
+      @include squish(3, 3, 12);
+    }
+    header.entry-header {
+      div.entry-date{
+        h4{
+          font-size: 11px;
+          font-size: 0.6875rem;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          color:$color14;
+
+        }
+        h1 {
+          line-height: 1.4;
+          word-wrap: break-word;
+          letter-spacing: 1px;
+          display: block;
+          font-family: "jubilat";
+          font-weight: normal!important;
+          font-size: 1.8em;
+
+        }
+      }
+
+    }
+  }
+
+    div.entry-content {
+      div.image_text {
+        a {
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+        p {
+          text-align: left;
+          line-height: 1.7;
+          letter-spacing: 1px;
+          font-size: 0.6875em;
+        }
+        }
+
+      }
+    }
+  }
+
