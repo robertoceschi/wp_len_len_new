@@ -116,3 +116,10 @@ function create_my_post_type() {
 
         return $ret2;
     }
+/**
+ * Removing p-Tags from Content
+ *
+ *
+ */
+
+remove_filter ('the_content', 'wpautop');
