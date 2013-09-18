@@ -44,7 +44,11 @@ $XXL: 100em;
 
 //Layout of Post/Page Sites
 #page_post_content {
-  margin-top: -30px;
+  margin-top: -10px;
+  @include at-breakpoint($L) {
+    margin-top: 40px;
+  }
+
   @include container;
   article.post {
 
@@ -93,7 +97,6 @@ $XXL: 100em;
         margin-top: -10px;
         margin-bottom: 10px;
       }
-
     }
   }
 
@@ -111,12 +114,308 @@ $XXL: 100em;
         line-height: 1.7;
         letter-spacing: 1px;
         font-size: 0.6875em;
-
+        @include at-breakpoint($M) {
+        font-size: 0.9em;
+        line-height: 1.8; }
       }
     }
   }
+  footer.entry-meta {
+    text-align: left;
+    padding-top: 50px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    div.postinfo-wrap {
+      span.share-btn {
+        float: right;
+          display: block;
+          //max-width: 30%;
+          float: right;
+          padding: 0 0 4px 25px;
+          margin-bottom: 0;
+          font-size: 0.6em;
+          color: $color14;
+          font-weight: bold;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          display:inline-block;
+          border:none;
+          outline:0;
+          cursor:pointer;
 
+        span.icon-share {
+          padding-right: 7px;
+        }
+
+      }
+      div.category {
+        padding:  0 0 20px;
+        font-weight: bold;
+        font-size: 10px;
+        @include at-breakpoint($M) {
+          font-size: 0.7em;
+      }
+        font-weight: bold;
+        letter-spacing: 1px;
+        span {
+          padding-right: 10px;
+          text-transform: uppercase;
+        }
+        a {
+          color: $color14;
+          &:hover { color: $color10  }
+        }
+      }
+      div.tags {
+        @extend .category;
+       a {
+         color: $color14;
+         &:hover { color: $color10}
+       }
+      }
+    }
+  }
+  //Styling Comments
+  div.comments-wrap {
+    margin-top: 40px;
+    @extend article.post;
+    div#comments.comments-area {
+      position: relative;
+      overflow: hidden;
+      h3.comments-title {
+        margin: 0 0 10px;
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-align: left;
+
+      }
+      ol.comment-list {
+        list-style: none;
+        padding-bottom: 20px;
+        padding-left: 0;
+        li {
+          margin: 0;
+          article.comment {
+            div.comment-avatar {
+              float: left;
+              padding: 17px 12px 0 0;
+
+            }
+            div.comment-content {
+              text-align: left;
+              display: block;
+              padding: 15px 0;
+              ul.comment-meta {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                font-size: 13px;
+                font-size: 0.8125rem;
+                li.comment-author {
+                  float: left;
+                  padding: 0;
+                  font-size: 13px;
+                  font-size: 0.8125rem;
+                  font-weight: bold;
+
+                }
+                li.comment-time {
+                  float: left;
+                  margin: 0 0 0 10px;
+                  padding: 0;
+                  font-weight: normal;
+                  a {
+                    color: $color14;
+                  }
+                }
+                li.comment-edit {
+                  @extend li.comment-time;
+                  a.comment-edit-link {
+                    color: $color14;
+                  }
+                }
+
+              }
+              div.comment-text {
+                margin: 0;
+                padding: 6px 0 0 0;
+                overflow: hidden;
+                p {
+                  margin: 0 0 10px;
+                  font-size: 13px;
+                  font-size: 0.8125rem;
+                  line-height: 1.7;
+                  letter-spacing: 1px;
+                }
+                p.comment-reply {
+                  a.comment-reply-link {
+                    color: $color14;
+                  }
+                }
+
+              }
+
+            }
+
+          }
+          ul.children {
+            margin-left: 40px;
+          }
+        }
+      }
+    }
+  }
 }
+//Styling Commentform
+div#respond.comment-respond {
+  margin: 0;
+  padding: 20px 10px;
+  background: rgb(247, 247, 247);
+  text-align: left;
+  h3#reply-title {
+  margin:0;
+  padding: 0;
+  font-size: 14px;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: inline-block;
+
+    }
+  form#commentform.comment-form {
+    p.logged-in-as {
+      font-size: 0.8125rem;
+      a {
+        color: $color14;
+        &:hover {
+          color:$color10
+        }
+      }
+
+    }
+    p.comment-note {
+      padding: 3px 0 10px;
+      line-height: normal;
+      font-size: 0.8125rem;
+
+    }
+    p.comment-form-author {
+      width: 98%;
+      margin: 0;
+      padding: 15px 0 0;
+      font-size: 13px;
+      font-size: 0.8125rem;
+      color: rgb(168, 168, 168);
+      @include at-breakpoint($M) {
+      float: left;
+      width: 31.3%;
+      margin-right: 2%; }
+    input#author {
+      display: block;
+      width: 97%;
+      margin: 4px 0 0;
+      padding: 8px;
+      background: rgb(255, 255, 255);
+      border: 1px solid rgb(221, 221, 221);
+      font-size: 13px;
+      font-size: 0.8125rem;
+      color: rgb(0, 0, 0);
+      line-height: 1.6;
+      -webkit-appearance: none;
+      -webkit-border-radius: 0;
+      outline-color: rgba(0, 0, 0, 0);
+      outline-style: none;
+    }
+  }
+    p.comment-form-email {
+      @extend p.comment-form-author;
+      input#email {
+        @extend input#author
+      }
+    }
+
+    p.comment-form-url {
+      @extend p.comment-form-author;
+      input#url {
+        @extend input#author
+      }
+    }
+    p.comment-form-comment {
+      label {
+        @extend p.comment-form-author;
+      }
+     textarea#comment {
+       width: 97%;
+       margin: 5px 0 0;
+       padding: 8px 2%;
+       background: rgb(255, 255, 255);
+       border: 1px solid rgb(221, 221, 221);
+       font-size: 13px;
+       font-size: 0.8125rem;
+       color: rgb(0, 0, 0);
+       line-height: 1.45;
+       -webkit-appearance: none;
+       -webkit-border-radius: 0;
+       outline-color: rgba(0, 0, 0, 0);
+       outline-style: none;
+
+      }
+    }
+    p.form-submit {
+      margin: 0 0 10px;
+      input#submit {
+        background:$color13;
+        &:hover {
+          background: lighten($color13, 7%);
+        }
+        width: 99%;
+        margin: 15px 0 5px;
+        padding: 17px 0;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        border-bottom: 3px solid rgb(237, 237, 237);
+        font-size: 12px;
+        font-size: 0.75rem;
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        cursor: pointer;
+        -webkit-appearance: none;
+        -webkit-border-radius: 0;
+        -webkit-transition: all 0.18s ease-in-out;
+        -moz-transition: all 0.18s ease-in-out;
+        -o-transition: all 0.18s ease-in-out;
+        transition: all 0.18s ease-in-out;
+
+      }
+
+    }
+  }
+}
+nav.nav-single {
+  padding: 60px 0 30px;
+  font-size: 0.8em;
+  a {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+    color: rgb(168, 168, 168);
+  }
+  div.nav-previous {
+    float: right;
+  }
+  div.nav-next {
+    float: left;
+  }
+}
+
+
+
+
+
+
 
 
 

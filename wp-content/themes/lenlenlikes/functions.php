@@ -123,3 +123,61 @@ function create_my_post_type() {
  */
 
 remove_filter ('the_content', 'wpautop');
+
+
+if ( ! function_exists( 'lenlenlikes_comment' ) ) :
+/*-----------------------------------------------------------------------------------*/
+/* Comments template lenlenlikes_comment
+/*-----------------------------------------------------------------------------------*/
+function lenlenlikes_comment( $comment, $args, $depth ) {
+    $GLOBALS['comment'] = $comment;
+    switch ( $comment->comment_type ) :
+        case '' :
+            ?>
+
+            <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+            <article id="comment-<?php comment_ID(); ?>" class="comment">
+
+                <div class="comment-avatar">
+                    <?php echo get_avatar( $comment, 40 ); ?>
+                </div>
+
+                <div class="comment-content">
+                    <ul class="comment-meta">
+                        <li class="comment-author"><?php printf( __( ' %s ', 'lenlenlikes' ), sprintf( ' %s ', get_comment_author_link() ) ); ?></li>
+                        <li class="comment-time"><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
+                                <?php
+                                /* translators: 1: date, 2: time */
+                                printf( __( '%1$s @ %2$s', 'lenlenlikes' ),
+                                    get_comment_date('d.m.y'),
+                                    get_comment_time() );
+                                ?></a></li>
+                        <li class="comment-edit"><?php edit_comment_link( __( 'Edit', 'lenlenlikes' ), ' ' );?></li>
+                    </ul>
+                    <div class="comment-text">
+                        <?php comment_text(); ?>
+                        <?php if ( $comment->comment_approved == '0' ) : ?>
+                            <p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'lenlenlikes' ); ?></p>
+                        <?php endif; ?>
+                        <p class="comment-reply"><?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply', 'lenlenlikes' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?></p>
+                    </div><!-- end .comment-text -->
+
+                </div><!-- end .comment-content -->
+
+            </article><!-- end .comment -->
+
+            <?php
+            break;
+        case 'pingback'  :
+        case 'trackback' :
+            ?>
+            <li class="pingback">
+            <p><?php _e( '<span>Pingback:</span>', 'lenlenlikes' ); ?> <?php comment_author_link(); ?></p>
+            <p class="pingback-edit"><?php edit_comment_link( __('Edit', 'lenlenlikes'), ' ' ); ?></p>
+            <?php
+            break;
+    endswitch;
+}
+endif;
+
+// Customize Comment Form
